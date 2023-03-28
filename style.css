@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+
+:root{
+    --bg:#fff;
+}
+*{
+    font-family: 'Alkatra', cursive;
+}
+
+body{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient(rgb(68, 63, 63) 60%,rgb(41, 31, 31));
+}
+
+h3{
+    position: absolute;
+    top: -3vw;
+    left:1vw;
+    font-size: 4vw;
+}
+.playingArea{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 70vh;
+    
+    margin-top: -10vh;
+    gap: 3vw;
+}
+
+card{
+    cursor: pointer;
+    width: 11vw;
+    height: 15vw;
+    
+    border-radius: 1vw;
+    scale: 1.1;
+    transition-duration: .3s;
+    /* box-shadow: 0 0 2vw 1vw black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    
+    
+}
+
+card:hover{
+    scale: 1.3;
+}
+
+#settings{
+    position: absolute;
+    left: 0;
+    bottom: 0vw;
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+    color: white;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current{
+    height: 50vh;
+    width: 70vw;
+    position: absolute;
+    bottom: -35vh;
+    background-color:gray ;
+    z-index: 5;
+    transition-duration: .3s;
+    border-radius: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1vw;
+    scale: .8;
+}
+.current:hover{
+    bottom: -10vh;
+    scale: 1;
+    gap:5vw;
+    
+   
+}
+.current >card{
+    margin-top: -27vh;
+    scale: .7;
+}
+.current:hover >card{
+    scale: 1;
+    margin-top: -10vh;
+}
+
+.other>card{
+    display: none;
+}
+
+.activeCard{
+    
+    opacity: .6;
+}
