@@ -7,6 +7,9 @@
     <title>Scopa</title>
     <script src="code.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <script src="firebase.js" type="module" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 </head>
 <body>
     <h3>Scopa mafakka</h3>
@@ -18,28 +21,28 @@
         
     </div>
     <div class="player1 current">
-        <card class="handCards"></card>
-        <card class="handCards"></card>
-        <card class="handCards"></card>
-        <card class="handCards"></card>
+        <card class="handCards 1"></card>
+        <card class="handCards 1"></card>
+        <card class="handCards 1"></card>
+        <card class="handCards 1"></card>
     </div>
     <div class="player2 other">
-        <card></card>
-        <card></card>
-        <card></card>
-        <card></card>
+        <card class="handCards 2"></card>
+        <card class="handCards 2"></card>
+        <card class="handCards 2"></card>
+        <card class="handCards 2"></card>
     </div>
     <div class="player3 other">
-        <card></card>
-        <card></card>
-        <card></card>
-        <card></card>
+        <card class="handCards 3"></card>
+        <card class="handCards 3"></card>
+        <card class="handCards 3"></card>
+        <card class="handCards 3"></card>
     </div>
     <div class="player4 other" >
-        <card></card>
-        <card></card>
-        <card></card>
-        <card></card>
+        <card class="handCards 4"></card>
+        <card class="handCards 4"></card>
+        <card class="handCards 4"></card>
+        <card class="handCards 4"></card>
     </div>
     
     <div id="settings">

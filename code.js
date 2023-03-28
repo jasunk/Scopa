@@ -16,6 +16,7 @@ let player1Hand=[]
 let player2Hand=[]
 let player3Hand=[]
 let player4Hand=[]
+let playerhands= [player1Hand,player2Hand,player3Hand,player4Hand]
 
 let team1taken=[]
 let team2taken=[]
@@ -110,7 +111,12 @@ for (let i = 0;i<boardCards.length;i++){
 let kortnummer = 0
 let kortType = 0
 let url = 0
-let cardsInPlay=document.querySelectorAll("card")
+const cardsInPlay=document.querySelectorAll(".board")
+let player1cards = document.getElementsByClassName("1")
+let player2cards = document.getElementsByClassName("2")
+let player3cards = document.getElementsByClassName("3")
+let player4cards = document.getElementsByClassName("4")
+let allPlayerCards = [player1cards,player2cards,player3cards,player4cards]
 
 for (let i = 0; i < 40; i++) {
     
@@ -137,7 +143,7 @@ for (let i = 0; i < 40; i++) {
     kortStokk.push(kort)
     
 }
-console.log(kortStokk)
+console.log(cardsInPlay)
 let index;
 for (let i = 0; i < cardsInPlay.length; i++) {
      index = parseInt(Math.random()*kortStokk.length)
@@ -146,9 +152,31 @@ for (let i = 0; i < cardsInPlay.length; i++) {
     }
     cardsInPlay[i].innerHTML= kortStokk[(index)].nummer
     cardsInPlay[i].style.content="url(bilder/"+(kortStokk[(index)].url)+".png)"
+    bordKort.push(kortStokk[index])
     console.log(kortStokk[index].url, kortStokk[index].nummer)
     kortStokk.pop(index)
-    
-    
-    
 }
+
+for (let i = 0; i < allPlayerCards.length; i++) {
+    console.log(allPlayerCards)
+    for (let n = 0; n < 4; n++) {
+        index = parseInt(Math.random()*kortStokk.length)
+    if (kortStokk[index].nummer ==1){
+       index = parseInt(Math.random()*kortStokk.length)
+   }
+   allPlayerCards[i][n].innerHTML= kortStokk[(index)].nummer
+   allPlayerCards[i][n].style.content="url(bilder/"+(kortStokk[(index)].url)+".png)"
+   playerhands[i].push(kortStokk[index])
+   console.log(kortStokk[index].url, kortStokk[index].nummer)
+   kortStokk.pop(index)
+        
+    }
+    
+   
+   
+   
+}
+
+
+
+
